@@ -8,6 +8,7 @@ interface IProps {
   type: "submit" | "button";
   children: ReactNode;
   className?: string;
+  onClick?: () => void;
 }
 
 const Button = ({
@@ -15,16 +16,18 @@ const Button = ({
   backgroundColor,
   textColor = "white",
   width = "full",
+  type = "button",
   children,
   className,
+  onClick,
 }: IProps) => {
   return (
     <button
+      onClick={onClick ? onClick : undefined}
+      type={type}
       disabled={isLoading}
-      style={{ backgroundColor }}
-      className={`py-2 text-sm ${
-        textColor === "white" ? "text-white" : `text-${textColor}`
-      } ${width === "fit" ? "w-fit" : "w-full"} ${
+      style={{ backgroundColor, color: textColor }}
+      className={`py-2 text-sm ${width === "fit" ? "w-fit" : "w-full"} ${
         backgroundColor ? "" : "bg-blue-500 hover:bg-blue-600"
       } rounded-lg cursor-pointer disabled:bg-gray-300 disabled:cursor-not-allowed ${className}`}
     >
