@@ -22,7 +22,9 @@ const router = createBrowserRouter(
             <RootLayout />
           </ProtectedRoute>
         }
-      ></Route>
+      >
+        <Route index element={<span>Outlet</span>} />
+      </Route>
     </>
   )
 );

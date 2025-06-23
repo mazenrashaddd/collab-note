@@ -1,17 +1,20 @@
 import { Outlet } from "react-router-dom";
-import { useSelector } from "react-redux";
-import type { RootState } from "../app/store";
+import Navbar from "../components/Navbar";
+import Sidebar from "../components/Sidebar";
 
 const RootLayout = () => {
-  const email = useSelector((state: RootState) => {
-    return state.authLogin.user?.email;
-  });
   return (
-    <>
-      {/* navbar later */}
-      <span>{email}</span>
-      <Outlet />
-    </>
+    <div className="flex flex-col min-h-screen">
+      <Navbar />
+      <div className="flex flex-1 mt-16">
+        <div className="w-3xs bg-gray-100 border-r-1 border-gray-200">
+          <Sidebar />
+        </div>
+        <div className="flex flex-1 p-6 bg-gray-100">
+          <Outlet />
+        </div>
+      </div>
+    </div>
   );
 };
 

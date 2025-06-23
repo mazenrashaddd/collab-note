@@ -27,7 +27,7 @@ const Button = ({
       type={type}
       disabled={isLoading}
       style={{ backgroundColor, color: textColor }}
-      className={`py-2 text-sm ${width === "fit" ? "w-fit" : "w-full"} ${
+      className={`py-2 ${width === "fit" ? "w-fit" : "w-full"} ${
         backgroundColor ? "" : "bg-blue-500 hover:bg-blue-600"
       } rounded-lg cursor-pointer disabled:bg-gray-300 disabled:cursor-not-allowed ${className}`}
     >
