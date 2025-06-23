@@ -109,7 +109,7 @@ const RegisterPage = () => {
   return (
     <div className="flex justify-center items-center h-screen">
       <div className="flex flex-col w-md sm:w-lg justify-center items-center bg-white p-8 border-white rounded-2xl shadow-lg space-y-8">
-        <div className="flex flex-col items-center space-y-2">
+        <div className="flex flex-col items-center justify-center text-center space-y-2">
           <span className="font-[Pacifico] text-5xl text-blue-400">
             abs.ai notes
           </span>

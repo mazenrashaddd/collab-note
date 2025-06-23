@@ -1,4 +1,8 @@
-import type { ILoginForm, IRegisterForm } from "../interfaces";
+import type {
+  ILoginForm,
+  IRegisterForm,
+  IResetPasswordForm,
+} from "../interfaces";
 
 export const loginFormInputData: ILoginForm[] = [
   {
@@ -33,5 +37,14 @@ export const registerFormInputData: IRegisterForm[] = [
     placeholder: "Re-enter your password",
     type: "password",
     name: "confirmPassword",
+  },
+];
+
+export const resetPasswordFormInputData: IResetPasswordForm[] = [
+  {
+    label: "Email address",
+    placeholder: "you@example.com",
+    type: "string",
+    name: "email",
   },
 ];

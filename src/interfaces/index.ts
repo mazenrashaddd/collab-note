@@ -22,3 +22,14 @@ export interface IRegisterForm {
   type: "string" | "password";
   name: "email" | "password" | "confirmPassword";
 }
+
+export interface IResetPasswordFormData {
+  email: string;
+}
+
+export interface IResetPasswordForm {
+  label: "Email address";
+  placeholder: string;
+  type: "string";
+  name: "email";
+}
