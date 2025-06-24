@@ -2,8 +2,8 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { ArrowLeftFromLine } from "lucide-react";
 import { clearAuthLogin } from "../app/features/auth/authLoginSlice";
-import SidebarButton from "./ui/SideBarButton";
-import SidebarIcon from "./ui/SideBarIcon";
+import SidebarButton from "./ui/SidebarButton";
+import SidebarIcon from "./ui/SidebarIcon";
 import { useNavigate } from "react-router-dom";
 
 const Sidebar = () => {

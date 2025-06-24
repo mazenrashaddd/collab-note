@@ -33,3 +33,17 @@ export interface IResetPasswordForm {
   type: "string";
   name: "email";
 }
+
+export interface ICollaborator {
+  firstName: string;
+  lastName: string;
+  color: string;
+}
+
+export interface INote {
+  id: string;
+  title: string;
+  description: string;
+  dateOfEdit: string;
+  collaborators: ICollaborator[];
+}
