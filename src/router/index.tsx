@@ -8,6 +8,7 @@ import ProtectedRoute from "../components/auth/ProtectedRoute";
 import LoginPage from "../pages/Login";
 import RegisterPage from "../pages/Register";
 import ResetPassword from "../pages/ResetPassword";
+import Dashboard from "../components/Dashboard";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -23,7 +24,10 @@ const router = createBrowserRouter(
           </ProtectedRoute>
         }
       >
-        <Route index element={<span>Outlet</span>} />
+        <Route index element={<Dashboard />} />
+        <Route path="my-notes" element={<span>My Notes</span>} />
+        <Route path="shared-with-me" element={<span>Shared With Me</span>} />
+        <Route path="payment" element={<span>Payment</span>} />
       </Route>
     </>
   )

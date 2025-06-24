@@ -4,6 +4,9 @@ import { Toaster } from "react-hot-toast";
 import { useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 import { setAuthLogin } from "./app/features/auth/authLoginSlice";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+const queryClient = new QueryClient();
 
 const App = () => {
   const [isAuthLoaded, setIsAuthLoaded] = useState(false);
@@ -19,12 +22,12 @@ const App = () => {
   }, []);
   if (!isAuthLoaded) return null;
   return (
-    <>
+    <QueryClientProvider client={queryClient}>
       <div>
         <Toaster />
       </div>
       <RouterProvider router={router} />
-    </>
+    </QueryClientProvider>
   );
 };
 

@@ -4,9 +4,11 @@ import { ArrowLeftFromLine } from "lucide-react";
 import { clearAuthLogin } from "../app/features/auth/authLoginSlice";
 import SidebarButton from "./ui/SideBarButton";
 import SidebarIcon from "./ui/SideBarIcon";
+import { useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const [selectedTab, setSelectedTab] = useState("Dashboard");
 
@@ -15,7 +17,10 @@ const Sidebar = () => {
       <div className="space-y-5 p-6">
         <SidebarButton
           isSelected={selectedTab === "Dashboard"}
-          onClick={() => setSelectedTab("Dashboard")}
+          onClick={() => {
+            setSelectedTab("Dashboard");
+            navigate("/");
+          }}
         >
           <SidebarIcon iconName="Dashboard" />
           <span>Dashboard</span>
@@ -23,7 +28,10 @@ const Sidebar = () => {
 
         <SidebarButton
           isSelected={selectedTab === "My Notes"}
-          onClick={() => setSelectedTab("My Notes")}
+          onClick={() => {
+            setSelectedTab("My Notes");
+            navigate("/my-notes");
+          }}
         >
           <SidebarIcon iconName="My Notes" />
           <span>My Notes</span>
@@ -31,7 +39,10 @@ const Sidebar = () => {
 
         <SidebarButton
           isSelected={selectedTab === "Shared With Me"}
-          onClick={() => setSelectedTab("Shared With Me")}
+          onClick={() => {
+            setSelectedTab("Shared With Me");
+            navigate("./shared-with-me");
+          }}
         >
           <SidebarIcon iconName="Shared With Me" />
           <span>Shared With Me</span>
@@ -39,7 +50,10 @@ const Sidebar = () => {
 
         <SidebarButton
           isSelected={selectedTab === "Payment"}
-          onClick={() => setSelectedTab("Payment")}
+          onClick={() => {
+            setSelectedTab("Payment");
+            navigate("/payment");
+          }}
         >
           <SidebarIcon iconName="Payment" />
           <span>Payment</span>

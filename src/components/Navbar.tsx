@@ -11,10 +11,10 @@ const Navbar = () => {
   const dispatch = useDispatch();
 
   return (
-    <nav className="flex justify-between items-center fixed h-16 w-full top-0 left-0 shadow-md px-6 bg-white z-50">
+    <nav className="flex justify-between items-center fixed h-16 w-full top-0 left-0 shadow-xs px-6 bg-white z-50">
       <div>
         <span className="font-[Pacifico] text-blue-500 text-2xl">
-          CollabNote
+          CollabNotes
         </span>
       </div>
 

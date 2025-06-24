@@ -17,7 +17,7 @@ const SidebarButton = ({ isSelected, children, onClick }: IProps) => {
             : "text-gray-600 font-medium hover:bg-gray-200 duration-200"
         }`}
       >
-        <div className="flex justify-start items-center space-x-2">
+        <div className="flex justify-start items-center space-x-4">
           {children}
         </div>
       </button>
